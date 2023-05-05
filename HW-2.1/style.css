@@ -14,8 +14,8 @@ body {
 }
 
 .center {
-  padding-left: calc(50% - 720px);
-  padding-right: calc(50% - 720px);
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 
 }
 
@@ -24,6 +24,7 @@ body {
   padding-right: calc(50% - 720px - 121px);
 
 }
+
 .top_page {
   height: 1024px;
   background: #000915;
@@ -58,27 +59,22 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
-  display: flex;
-  align-items: center;
   color: #FFFFFF;
 }
 
 .startGame {
   box-sizing: border-box;
-  width: 234.06px;
-  height: 48.6px;
-  margin-left: calc(50% - 720px + 121px);
-  margin-right: calc(50% - 720px - 121px);
+  width: 234px;
+  height: 49px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   color: #FFFFFF;
   background: #9C0332;
   border-radius: 30px;
-  outline: none;
+  border: none;
 }
 
 .bottom_page {
