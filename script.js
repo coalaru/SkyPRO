@@ -1,76 +1,71 @@
 //Задание 1
-let a
-a = 10;
-alert(`ответ равен ${a}`);
-a = 20;
-alert(`ответ равен ${a}`)
+let password = `юзер`;
+let userPass = prompt(`Введите пароль`);
+if (password === userPass) {
+    alert(`Пароль введён верно`);
+} else {
+    alert(`Пароль введён неверно`);
+
+}
+
 
 //Задание 2
-const firstIphone = 2007;
-alert(`год выпуска первого iPhone: ${firstIphone}`);
+let x = prompt(`Введите число`);
+if (0 < x && x < 10) {
+    alert(`Верно`);
+
+} else {
+    alert(`Неверно`);
+
+}
+
 
 //Задание 3;
-const jsCreator = `Brendan Eich`;
-alert(`создатель языка Java Script: ${jsCreator}`);
+let d = prompt(`Введите число 1`);
+let e = prompt(`Введите число 2`);
+if (d > 100 || e > 100) {
+    alert(`Верно`);
+
+} else {
+    alert(`Неверно`);
+
+}
 
 //Задание 4
-let c = 10;
-let d = 2;
-let sum = (c + d);
-let different = (c - d);
-let multiplay = (c * d);
-let quotient = (c / d);
-alert(`сумма: ${sum} разность: ${different} произведение: ${multiplay} частное: ${quotient}`);
+let a = `2`;
+let b = `3`;
+alert(Number(a) + Number(b));
 
 //Задание 5
-let exponentiation = (2 ** 5);
-alert(`результат возведения 2 в пятую степень равен ${exponentiation}`);
+let monthNumber = prompt(`Введите номер месяца`);
+switch (monthNumber) {
+    case '12':
+    case '1':
+    case '2':
+        alert(`Зима`);
+        break;
+    case '3':
+    case '4':
+    case '5':
+        alert(`Весна`);
+        break;
+    case '6':
+    case '7':
+    case '8':
+        alert(`Лето`);
+        break;
+    case '9':
+    case '10':
+    case '11':
+        alert(`Осень`);
+        break;
+    default:
+        break;
+}
 
-//Задание 6
-let e = 9;
-let f = 2;
-let result = (9 % 2);
-alert(`модуль чисел ${e} и ${f} равен ${result}`)
 
 //Задание 7
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num += 1;
-num -= 1;
-alert(`ответ равен ${num}`);
 
 //Задание 8
-let age = Number(prompt(`укажите Ваш возраст`));
-alert(`вы ввели Ваш возраст: ${age}`);
 
-//Задание 9.0
-let user = {
-    name: `Alex`,
-    age: 52,
-    isAdmin: true
-};
-
-//Задание 9.1
-user[`city of residence`] = `Krasnodar`;
-
-//Задание 9.2
-user.age = 30;
-
-//Задание 9.3
-delete user[`city of residence`];
-
-//Задание 9.4
-let info = Number(prompt(`Какую информацию хотите узнать о пользователе? 1-имя, 2-возраст, 3-является ли он Админом`));
-if (info == 1) { alert(user.name) };
-if (info == 2) { alert(user.age) };
-if (info == 3) { alert(user.isAdmin) };
-
-//Задание 10
-let boss = (prompt(`как твоё имя, о великий?`));
-alert(`приветствую тебя, о великий ${boss}!`)
-
-//прикольно :) можно было поиграть с info=3 и isAdmin true\false
-// и от этого alert да\нет ...но уже 2:04- пошел спать
+//Задание 9
