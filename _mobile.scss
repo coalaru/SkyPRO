@@ -1,0 +1,82 @@
+@media (max-width: 376px) {
+    .center {
+        padding-left : calc(50% - 171px);
+        padding-right: calc(50% - 171px);
+    }
+
+    .position {
+        padding-left : 16px;
+        padding-right: 16px;
+
+    }
+
+    .top_page {
+        height             : 735px;
+        background         : #000915;
+        background-image   : url(img/topPageMob.jpg);
+        background-repeat  : no-repeat;
+        background-position: center;
+        text-align         : center;
+    }
+
+    .welcomeHeader {
+        width          : 343px;
+        padding-top    : 238px;
+        font-weight    : 700;
+        font-size      : 32px;
+        line-height    : 39px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        align-content  : center;
+        flex-wrap      : wrap;
+        flex-direction : column;
+        color          : #FFFFFF;
+    }
+
+    .welcomeText {
+        width         : 343px;
+        padding-top   : 32px;
+        padding-bottom: 32px;
+        font-weight   : 300;
+        font-size     : 14px;
+        line-height   : 22px;
+        color         : #FFFFFF;
+    }
+
+    .startGame {
+        box-sizing: border-box;
+        width     : 234px;
+        height    : 49px;
+
+        font-weight: 400;
+        font-size  : 18px;
+        line-height: 22px;
+
+        color        : #FFFFFF;
+        background   : #9C0332;
+        border-radius: 30px;
+        border       : none;
+    }
+
+    .game1 {
+        width           : 343px;
+        height          : 300px;
+        background-image: url(img/game1mob.png);
+        border-radius   : 16px;
+    }
+
+    .game2 {
+        width           : 343px;
+        height          : 300px;
+        background-image: url(img/game2mob.png);
+        border-radius   : 16px;
+    }
+
+    .game3 {
+        width           : 343px;
+        height          : 300px;
+        background-image: url(img/game3mob.png);
+        border-radius   : 16px;
+    }
+}
