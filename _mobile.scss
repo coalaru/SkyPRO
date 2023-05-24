@@ -79,4 +79,41 @@
         background-image: url(img/game3mob.png);
         border-radius   : 16px;
     }
+
+
+    .game1Page {
+        display      : flex;
+        flex-wrap    : wrap;
+        margin-bottom: 178px;
+    }
+
+    .game1Header {
+        width      : 243px;
+        padding-top: 51px;
+        font-weight: 700;
+        font-size  : 32px;
+        line-height: 39px;
+        color      : #FFFFFF;
+    }
+
+    .game1Text {
+        width         : 343px;
+        padding-top   : 32px;
+        padding-bottom: 32px;
+        font-weight   : 300;
+        font-size     : 14px;
+        line-height   : 22px;
+        color         : #FFFFFF;
+    }
+
+    .gamePlay {
+        width           : 344px;
+        height          : 236px;
+        margin-left     : 16px;
+        background-image: url(img/undraw_video_game_night_mob.svg);
+    }
+
+    .imgPlay {
+        padding-left: 16px;
+    }
 }
