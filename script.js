@@ -1,101 +1,120 @@
 
 //Задание 1
-let password = `юзер`;
-let userPass = prompt(`Введите пароль`);
-if (password === userPass) {
-    alert(`Пароль введён верно`);
-} else {
-    alert(`Пароль введён неверно`);
+
+function compare(a, b) {
+
+    if (a <= b) {
+        return a;
+    } else {
+        return b;
+    }
+
 }
 
+//проверка
+let a = prompt(`Введите число 1`);
+let b = prompt(`Введите число 2`);
+console.log(compare(a, b));
 
 //Задание 2
-let x = prompt(`Введите число`);
-if (0 < x && x < 10) {
-    alert(`Верно`);
-} else {
-    alert(`Неверно`);
+
+function parity(x) {
+
+    let module;
+    if (isNaN(x) === false) { module = (x % 2) }
+    else { return (`Вы ввели НЕ ЧИСЛО`) };
+    if (module === 0) { return (`Число четное`) }
+    if (module === 1) { return (`Число нечетное`) };
 }
+
+//проверка
+let x = prompt(`Введите число`);
+console.log(parity(x));
 
 
 //Задание 3;
-let d = prompt(`Введите число 1`);
-let e = prompt(`Введите число 2`);
-if (d > 100 || e > 100) {
-    alert(`Верно`);
-} else {
-    alert(`Неверно`);
+//задание 3.1
+
+let squaring1 = (x) => {
+    let result = x * x;
+    console.log(result);
+    return result;
 }
+
+
+//задание 3.2
+
+let squaring2 = (x) => x * x;
+
+//проверка:
+let x = prompt(`Введите число`);
+console.log(squaring2(x));
+squaring1(x)
 
 //Задание 4
-let a = `2`;
-let b = `3`;
-alert(Number(a) + Number(b));
+
+function askAge(z) {
+    if (z < 0 || isNaN(z)) { alert`Вы ввели неправильное значение` };
+    if (z >= 0 && z <= 12) { alert`Привет, друг!` };
+    if (z >= 13) { alert`Добро пожаловать` };
+}
+//проверка
+let z = prompt(`Ведите Ваш возраст`);
+askAge(z);
+
 
 //Задание 5
-let monthNumber = prompt(`Введите номер месяца`);
-switch (monthNumber) {
-    case '12':
-    case '1':
-    case '2':
-        alert(`Зима`);
-        break;
-    case '3':
-    case '4':
-    case '5':
-        alert(`Весна`);
-        break;
-    case '6':
-    case '7':
-    case '8':
-        alert(`Лето`);
-        break;
-    case '9':
-    case '10':
-    case '11':
-        alert(`Осень`);
-        break;
-    default:
-        break;
+
+function compare(x, y) {
+    if (isNaN(x) || isNaN(y)) { return (`Одно или оба значения не являются числом`) }
+    else { return x * y };
 }
 
+//проверка
+let a = prompt(`Введите число 1`);
+let b = prompt(`Введите число 2`);
+console.log(compare(a, b));
+
+//Задание 6
+
+let n = prompt(`Ведите число`);
+function cubing(n) {
+    if (isNaN(n)) { return (`Переданный параметр не является числом`) }
+    else result = n ** 3;
+    return result
+};
+
+//console.log(cubing(n))
+//быстрая проверка, если отключить строку prompt
+for (i = 0; i <= 10; i++) {
+    console.log(cubing(i));
+};
 
 //Задание 7
-let module;
-let z = prompt(`Введите число`);
-if (isNaN(z) === false) { module = (z % 2) }
-else { alert(`Вы ввели НЕ ЧИСЛО`) };
-if (module === 0) { alert(`Число четное`) }
-if (module === 1) { alert(`Число нечетное`) };
 
-//Задание 8
-let clientOS = (Number(prompt(`Выберете вариант 0-iOS, 1-Android`)));
-if (clientOS == 0) { alert(`Установите версию приложения для iOS по ссылке`); }
-if (clientOS == 1) { alert(`Установите версию приложения для Android по ссылке`); }
-
-
-
-//Задание 9
-const deadLineYear = 2015;
-let clientDeviceYear = (Number(prompt(`введите год производства Вашего телефона`)));
-switch (clientOS) {
-    case 0:
-        if (clientDeviceYear >= deadLineYear) {
-            alert(`Установите обычную версию приложения для iOS по ссылке`);
-        } else { alert(`Установите облегчённую версию приложения для iOS по ссылке`); }
-        break;
-    case 1:
-        if (clientDeviceYear >= deadLineYear) {
-            alert(`Установите обычную версию приложения для Android по ссылке`);
-        } else { alert(`Установите облегчённую версию приложения для Android по ссылке`); }
-        break;
-    default:
-        alert(`ошибка ввода`);
-
+function Area() {
+    return Math.PI * this.radius ** 2;
+}
+function Perimeter() {
+    return this.radius * 2 * Math.PI;
 }
 
-//Задание 9 иной вариант
-if (clientDeviceYear >= deadLineYear && clientOS == 0) { alert(`Установите обычную версию приложения для iOS по ссылке`); }
-if (clientDeviceYear >= deadLineYear && clientOS == 1) { alert(`Установите обычную версию приложения для Android по ссылке`); }
-if (clientDeviceYear < deadLineYear && clientOS == 0) { alert(`Установите облегчённую версию приложения для iOS по ссылке`); }
-if (clientDeviceYear < deadLineYear && clientOS == 1) { alert(`Установите облегчённую версию приложения для Android по ссылке`); }
+const circle1 = {
+    radius: 10,
+
+    getArea: Area,
+    getPerimeter: Perimeter,
+};
+
+const circle2 = {
+    radius: 15,
+
+    getArea: Area,
+    getPerimeter: Perimeter,
+};
+
+//проверка
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter());
