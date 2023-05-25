@@ -101,7 +101,6 @@ body {
 }
 
 .bottom_page {
-  height: 556px;
   background: #000915;
   background-image: url(img/bottomPage.jpg);
   background-repeat: no-repeat;
@@ -168,9 +167,10 @@ body {
 
 .game1Page {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  margin-bottom: 234px;
+  flex-wrap: wrap;
+  gap: 120px;
+  padding-bottom: 234px;
+  padding-top: 234px;
 }
 
 .game1Header {
@@ -195,12 +195,7 @@ body {
 .gamePlay {
   width: 485px;
   height: 333px;
-  margin-left: 135px;
   background-image: url(img/undraw_video_game_night_8h8m\ 1.svg);
-}
-
-.imgPlay {
-  padding-left: 136px;
 }
 
 @media (max-width: 376px) {
@@ -277,14 +272,20 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 178px;
+    padding-top: 178px;
   }
   .game1Header {
-    width: 243px;
+    width: auto;
     padding-top: 51px;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
     color: #FFFFFF;
+  }
+  .game1_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .game1Text {
     width: 343px;

@@ -85,15 +85,22 @@
         display      : flex;
         flex-wrap    : wrap;
         margin-bottom: 178px;
+        padding-top  : 178px;
     }
 
     .game1Header {
-        width      : 243px;
+        width      : auto;
         padding-top: 51px;
         font-weight: 700;
         font-size  : 32px;
         line-height: 39px;
         color      : #FFFFFF;
+    }
+
+    .game1_content {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
     }
 
     .game1Text {
