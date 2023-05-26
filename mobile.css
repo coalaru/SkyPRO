@@ -1,0 +1,24 @@
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .position {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .welcomeHeader {
+    width: 789px;
+    padding-top: 217px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #FFFFFF;
+  }
+}/*# sourceMappingURL=mobile.css.map */
