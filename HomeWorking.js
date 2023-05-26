@@ -148,3 +148,52 @@ function filterPositive(array) {
 filterPositive([-1, 0, 5, -10, 56]);
 filterPositive([-25, 25, 0, -1000, -2]);
 
+//Задание 14
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+//это функция рандомного целого числа
+
+const first = [];
+
+//пустой массив
+
+for (let i = 0; i < 10; i++) {
+    let item = getRandomInt(0, 10);
+    first.push(item);
+} //заполняем первый массив рандомными данными в заданном диапазоне
+
+console.log(first);
+
+const last = first.filter(item => (item % 2 === 0)); //применяем метод filter для четных чисел
+
+console.log(last);
+
+//Задание 15
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+//это функция рандомного целого числа
+const first = [];
+
+//пустой массив
+
+for (let i = 0; i < 6; i++) {
+    let item = getRandomInt(0, 10);
+    first.push(item);
+} //заполняем первый массив рандомными данными в заданном диапазоне
+console.log(first);
+
+const getAverage = (numbers) => {
+    const sum = numbers.reduce((acc, number) => acc + number, 0); // находим сумму всех элементов массива
+    const length = numbers.length; //длинна массива
+    return sum / length; //среднее арифметическое
+};
+
+console.log(getAverage(first));
