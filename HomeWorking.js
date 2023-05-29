@@ -1,199 +1,153 @@
-let arr = [
-    [11, 12, 13],
-    ['one', 'two', 'three', 'fore'],
-    [31, 32, 33],
-];
-for (let arrIn1 of arr) {
-    console.log(arrIn1);
-    for (let arrIn2 of arrIn1) {
-        console.log(arrIn2);
-        // for (let element of arrIn2) {
-        //     console.log(element);
-        // }
-    }
-}
-
-let arrSum = [3, 4, 5, 6];
-const sum = (a, b, ...rest) => {
-    let result = a + b;
-    console.log(result);
-    console.log(rest);
-}
-console.log(sum(...arrSum)); //не работает пример из лекции
-
 
 //Задание 1
 
-let array = [1, 5, 4, 10, 0, 3];  //ДАНО:
-for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
-    if (array[i] === 10) break;
-}
+let start = (`I'll be back! сказал Терминатор`);  //ДАНО:
+let finish = start.toUpperCase();
+console.log(finish);
+
 
 
 //Задание 2
 
-let array = [1, 5, 4, 10, 0, 3];  //ДАНО:
-for (let i = 0; i < array.length; i++) {
-    if (array[i] === 4) { console.log(`позиция числа 4 в массиве равна ${i}`) };
 
-}
+const searchStart = function (array, srch) {
+    let result = [];
+    array.forEach((res) => {
+        if (res.toLowerCase().includes(srch.toLowerCase())) {
+            result.push(res);
+        }
+    })
+    console.log(result);
+};
+
+searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); // ['кошка', 'комар']
+searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'); // ['груша']
+searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); // []
 
 //Задание 3
-let array = [1, 3, 5, 10, 20];  //ДАНО:
-console.log(array.join(' '));
+let num = 32.58884;  //ДАНО:
+
+console.log(Math.floor(num));
+console.log(Math.ceil(num));
+console.log(Math.round(num));
+
 
 //Задание 4
 
-let array = [];
+let array = [52, 53, 49, 77, 21, 32]; //ДАНО:
+let result = array.sort();
+console.log(result);
+console.log(result[0]);
+console.log(result[(result.length - 1)]);
 
-for (let i = 0; i < 3; i++) {
-    array[i] = []; // создаем подмассивы
-
-    for (let j = 0; j < 3; j++) {
-        array[i].push(1); // заполняем подмассивы числами
-    }
-}
-
-console.log(array);
 
 //Задание 5
 
-let array = [1, 1, 1]; //ДАНО:
-
-for (let i = 0; i < 3; i++) {
-    array.push(2); // заполняем массив числами
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
-console.log(array);
+console.log(getRandomInt(1, 10));
+
 
 //Задание 6
+// максимальное использование своего кода
+const min = 0;
+const max = prompt('введите целое число');
+let lenghtArray = ((Math.floor(max / 2)));
+let numbs = new Array(lenghtArray);
 
-let array = [9, 8, 7, 'a', 6, 5]; //ДАНО:
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}; //случайное число в заданном диапазоне
 
-const numbers = array.filter(el => !isNaN(el)); //проверка "на число"
-const result = numbers.sort(); //сортировка
+function getRandomArrNumbers(max) {
 
-console.log(result);
+    for (let i = 0; i < lenghtArray; i++) {
+        numbs.push(getRandomInt(min, max))
+    };
+    return numbs;
+};
+
+getRandomArrNumbers(max);
+console.log(numbs);
+
 
 //Задание 7
 
-let array = [9, 8, 7, 6, 5]; //ДАНО:
+const min = prompt('введите целое число');
+const max = prompt('введите целое число');
 
-const userNum = prompt(`введите любое число`); //ввод любого числа
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}; //случайное число в заданном диапазоне
 
-array.forEach((el) => {
-    if (el == userNum) { alert('число есть в массиве') };
-}); //просмотр массива на наличие совпадения
+console.log(getRandomInt(min, max));
 
-//или так:
-let search = array.includes(userNum);
-if (search) { alert('число есть в массиве') };
 
-// Задание 8
+/// Задание 8
 
-let test = 'abcdef'; //ДАНО:
+let currentDate = new Date();
+console.log(currentDate);
 
-let arrayTest = test.split('');
-console.log(arrayTest);//для понимания, что происходит
-let arrayResult = arrayTest.reverse();
-console.log(arrayResult);//для понимания, что происходит
-let result = arrayTest.join('');
+//Mon May 29 2023 23:18:59 GMT+0300 (Москва, стандартное время)
 
-console.log(result);
 
 // Задание 9
 
-let array = [
-    [1, 2, 3],
-    [4, 5, 6]
-];//ДАНО:
+let currentDate = new Date();
+console.log(currentDate);
+let calc = (+ currentDate);
 
-let result = []; //новый пустой массив
+let date73 = 73 * 24 * 60 * 60 * 1000; //73 дня перевести в миллисекунды
+let searchDate = calc + date73;
 
-for (let arrIn1 of array) {
-    for (let arrIn2 of arrIn1) {
-        result.push(arrIn2);// заполняем массив числами
-    }
-}
-console.log(result);
+let dayAfter73 = new Date(searchDate);
+console.log(dayAfter73); // дата через 73
+
 
 //Задание 10
 
-let random = [4, 7, 1, 3, 6, 9, 3, 0]; //ДАНО
+const currentDate = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+console.log(currentDate.toLocaleDateString('ru-RU', options));
 
-for (let i = 0; i < (random.length - 1); i++) {
-    console.log(random[i] + random[i + 1]) //число итераций на 2 меньше длинны массива
-};
-console.log(random[(random.length - 1)]); //потому что у последнего элемента нет следующего
 
-//Задание 11
 
-let random = [4, 7, 1, 3, 6, 9, 3, 0]; //ДАНО
+const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+// создадим массив, где будем хранить названия месяцев на русском
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 
-let result = random.map(item => (item ** 2)); //новый массив квадратов этих чисел
-console.log(result);
+let myDate = new Date(); // здесь мы получаем текущую дату
+let fullDate = "Сегодня: " + myDate.getDate() + // getDate возвращает число
+    " " + months[myDate.getMonth()] + // getMonth возвращает номер месяца, который мы можем использовать в качестве индекса для массива months
+    " " + myDate.getFullYear() + // getFullYear возвращает год
+    ", " + days[myDate.getDay()] + // getDay возвращает номер дня недели, который мы используем в качестве индекса для массива days
+    " " + myDate.getHours() + " часов " + myDate.getMinutes() + " минут";
 
-//Задание 12
 
-const getLengthWords = source => source.map(str => str.length); //подсчет количества знаков в элементах массива 
-console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
+function daysWeek() {
+    let date = prompt('введите день');
+    let month = prompt('введите месяц') - 1;
+    let year = prompt('введите год');
 
-//Задание 13
+    let userDate = new Date(year, month, date);
+    let dayWeek = userDate.getDay();
 
-function filterPositive(array) {
-    const result = array.filter(item => item < 0); //применяем метод filter
-    console.log(result)
-}
-filterPositive([-1, 0, 5, -10, 56]);
-filterPositive([-25, 25, 0, -1000, -2]);
-
-//Задание 14
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-//это функция рандомного целого числа
-
-const first = [];
-
-//пустой массив
-
-for (let i = 0; i < 10; i++) {
-    let item = getRandomInt(0, 10);
-    first.push(item);
-} //заполняем первый массив рандомными данными в заданном диапазоне
-
-console.log(first);
-
-const last = first.filter(item => (item % 2 === 0)); //применяем метод filter для четных чисел
-
-console.log(last);
-
-//Задание 15
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-//это функция рандомного целого числа
-const first = [];
-
-//пустой массив
-
-for (let i = 0; i < 6; i++) {
-    let item = getRandomInt(0, 10);
-    first.push(item);
-} //заполняем первый массив рандомными данными в заданном диапазоне
-console.log(first);
-
-const getAverage = (numbers) => {
-    const sum = numbers.reduce((acc, number) => acc + number, 0); // находим сумму всех элементов массива
-    const length = numbers.length; //длинна массива
-    return sum / length; //среднее арифметическое
+    // let week = ['воскресенье', 'понедельник', 'вторник',
+    //     'среда', 'четверг', 'пятница', 'суббота'];
+    alert('Дата ' + date + ' ' + months[month] + ' ' + year + ' года ' + ' -это ' + days[dayWeek] + '! А ' + fullDate);
 };
 
-console.log(getAverage(first));
+daysWeek();
+
+
+//Задание 11 работа с макетом
+
