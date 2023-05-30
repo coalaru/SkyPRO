@@ -28,3 +28,23 @@ function seazons() {
     }
 }
 
+
+let game2 = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин']; //Дано:
+
+function memory() {
+    game2 = game2.sort(() => Math.random() - 0.5);
+    alert(game2);
+    let firstElement = game2[0];
+    let lastElement = game2[game2.length - 1];
+    let firstAnswer = prompt('Введите первый элемент массива');
+    let lastAnswer = prompt('Введите последний элемент массива');
+    if (firstAnswer.toLowerCase() === firstElement.toLowerCase() && lastAnswer.toLowerCase() === lastElement.toLowerCase()) {
+        alert('Вы ответили правильно!');
+    } else
+        if (firstAnswer.toLowerCase() === firstElement.toLowerCase() || lastAnswer.toLowerCase() === lastElement.toLowerCase()) {
+            alert('Вы были близки к победе!');
+        }
+        else {
+            alert('Вы ответили не правильно');
+        }
+}

@@ -31,7 +31,7 @@
                 <a onclick="seazons()" class="game_text" href="#">Игра 1</a>
             </div>
             <div class="game2">
-                <a class="game_text" href="#">Игра 2</a>
+                <a onclick="memory()" class="game_text" href="#">Игра 2</a>
             </div>
             <div class="game3">
                 <a class="game_text" href="#">Игра 3</a>
@@ -50,9 +50,25 @@
         <div class="gamePlay">
             <a onclick="seazons()" class="play_text" href="#"></a>
         </div>
-        
-        <! -- com -->
-            <script defer src="./script.js"></script>
+    </div>
+
+
+    <div class="game2Page center">
+        <div class="game1_content">
+            <h1 class="game1Header position">Запомни слова </h1>
+            <p class="game1Text position">При нажатии на кнопку играть, вы увидите несколько слов, которые вам
+                необходимо запомнить.
+            </p>
+            <button onclick="memory()" class="startGame">Играть!</button>
+        </div>
+        <div class="gamePlay2">
+            <a onclick="memory()" class="play_text" href="#"></a>
+        </div>
+    </div>
+
+    <script defer src="./script.js"></script>
+
+
 </body>
 
 </html>

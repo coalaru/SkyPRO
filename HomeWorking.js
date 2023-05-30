@@ -114,14 +114,14 @@ console.log(dayAfter73); // дата через 73
 
 //Задание 10
 
-const currentDate = new Date();
-const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
-console.log(currentDate.toLocaleDateString('ru-RU', options));
+// const currentDate = new Date();
+// const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+// console.log(currentDate.toLocaleDateString('ru-RU', options));
 
 
 
 const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-// создадим массив, где будем хранить названия месяцев на русском
+
 const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
     "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 
@@ -141,8 +141,6 @@ function daysWeek() {
     let userDate = new Date(year, month, date);
     let dayWeek = userDate.getDay();
 
-    // let week = ['воскресенье', 'понедельник', 'вторник',
-    //     'среда', 'четверг', 'пятница', 'суббота'];
     alert('Дата ' + date + ' ' + months[month] + ' ' + year + ' года ' + ' -это ' + days[dayWeek] + '! А ' + fullDate);
 };
 
@@ -151,3 +149,20 @@ daysWeek();
 
 //Задание 11 работа с макетом
 
+let game2 = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин']; //Дано:
+
+game2 = game2.sort(() => Math.random() - 0.5);
+alert(game2);
+let firstElement = game2[0];
+let lastElement = game2[game2.length - 1];
+let firstAnswer = prompt('Введите первый элемент массива');
+let lastAnswer = prompt('Введите последний элемент массива');
+if (firstAnswer.toLowerCase() === firstElement.toLowerCase() && lastAnswer.toLowerCase() === lastElement.toLowerCase()) {
+    alert('Вы ответили правильно!');
+} else
+    if (firstAnswer.toLowerCase() === firstElement.toLowerCase() || lastAnswer.toLowerCase() === lastElement.toLowerCase()) {
+        alert('Вы были близки к победе!');
+    }
+    else {
+        alert('Вы ответили не правильно');
+    }

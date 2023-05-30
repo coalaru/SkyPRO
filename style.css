@@ -174,7 +174,6 @@ body {
 }
 
 .game1Header {
-  width: 377px;
   padding-top: 52px;
   font-weight: 700;
   font-size: 48px;
@@ -196,6 +195,21 @@ body {
   width: 485px;
   height: 333px;
   background-image: url(img/undraw_video_game_night_8h8m\ 1.svg);
+}
+
+.game2Page {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 120px;
+  padding-bottom: 234px;
+  padding-top: 234px;
+}
+
+.gamePlay2 {
+  width: 485px;
+  height: 333px;
+  background-image: url(img/undraw_gaming_re_cma2\ 1.svg);
 }
 
 @media (max-width: 376px) {
@@ -304,5 +318,17 @@ body {
   }
   .imgPlay {
     padding-left: 16px;
+  }
+  .game2Page {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 178px;
+    padding-top: 178px;
+  }
+  .gamePlay2 {
+    width: 344px;
+    height: 236px;
+    margin-left: 16px;
+    background-image: url(img/undraw_gaming_re_cma2\ mob.svg);
   }
 }/*# sourceMappingURL=style.css.map */

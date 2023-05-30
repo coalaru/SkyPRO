@@ -123,4 +123,18 @@
     .imgPlay {
         padding-left: 16px;
     }
+
+    .game2Page {
+        display      : flex;
+        flex-wrap    : wrap;
+        margin-bottom: 178px;
+        padding-top  : 178px;
+    }
+
+    .gamePlay2 {
+        width           : 344px;
+        height          : 236px;
+        margin-left     : 16px;
+        background-image: url(img/undraw_gaming_re_cma2\ mob.svg);
+    }
 }
