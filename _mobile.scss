@@ -5,8 +5,8 @@
     }
 
     .position {
-        padding-left : 16px;
-        padding-right: 16px;
+        // padding-left : 16px;
+        // padding-right: 16px;
 
     }
 
@@ -78,14 +78,15 @@
         height          : 300px;
         background-image: url(img/game3mob.png);
         border-radius   : 16px;
+        margin-bottom   : 128px;
     }
 
-
+    // Игра1
     .game1Page {
-        display      : flex;
-        flex-wrap    : wrap;
-        margin-bottom: 178px;
-        padding-top  : 178px;
+        display       : flex;
+        flex-wrap     : wrap;
+        padding-bottom: 16px;
+        padding-top   : 16px;
     }
 
     .game1Header {
@@ -105,6 +106,7 @@
 
     .game1Text {
         width         : 343px;
+        text-align    : center;
         padding-top   : 32px;
         padding-bottom: 32px;
         font-weight   : 300;
@@ -124,17 +126,48 @@
         padding-left: 16px;
     }
 
+
+    // Игра2
     .game2Page {
         display      : flex;
         flex-wrap    : wrap;
         margin-bottom: 178px;
-        padding-top  : 178px;
+        padding-top  : 51px;
     }
+
+    // .game2Header {
+    //     width      : auto;
+    //     padding-top: 51px;
+    //     font-weight: 700;
+    //     font-size  : 32px;
+    //     line-height: 39px;
+    //     color      : #FFFFFF;
+    // }
+
+    // .game2_content {
+    //     display       : flex;
+    //     flex-direction: column;
+    //     align-items   : center;
+    // }
+
+    // .game1Text {
+    //     width         : 343px;
+    //     padding-top   : 32px;
+    //     padding-bottom: 32px;
+    //     font-weight   : 300;
+    //     font-size     : 14px;
+    //     line-height   : 22px;
+    //     color         : #FFFFFF;
+    // }
 
     .gamePlay2 {
         width           : 344px;
         height          : 236px;
         margin-left     : 16px;
         background-image: url(img/undraw_gaming_re_cma2\ mob.svg);
+    }
+
+    .imgPlay2 {
+        padding-left: 16px;
     }
 }
