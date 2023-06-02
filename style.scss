@@ -1,0 +1,239 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes heartbeat {
+    from {
+        transform                : scale(1);
+        transform-origin         : center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform                : scale(0.91);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform                : scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform                : scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform                : scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+$trans : all .8s linear;
+$anima : heartbeat 1.5s ease-in-out infinite both;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-style : normal;
+    background : #000915;
+}
+
+.center {
+    padding-left : calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+
+}
+
+.position {
+    padding-left : calc(50% - 720px + 121px);
+    padding-right: calc(50% - 720px - 121px);
+
+}
+
+.top_page {
+    height             : 1024px;
+    background         : #000915;
+    background-image   : url(img/topPage.jpg);
+    background-repeat  : no-repeat;
+    background-position: center;
+}
+
+.top_content {
+    align-items: center;
+}
+
+.welcomeHeader {
+    width          : 789px;
+    padding-top    : 217px;
+    font-weight    : 700;
+    font-size      : 64px;
+    line-height    : 78px;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: center;
+    align-content  : center;
+    flex-wrap      : wrap;
+    flex-direction : column;
+    color          : #FFFFFF;
+}
+
+.welcomeText {
+    width         : 481px;
+    padding-top   : 32px;
+    padding-bottom: 44px;
+    font-weight   : 300;
+    font-size     : 18px;
+    line-height   : 32px;
+    color         : #FFFFFF;
+}
+
+.startGame {
+    box-sizing: border-box;
+    width     : 234px;
+    height    : 49px;
+
+    font-weight: 400;
+    font-size  : 18px;
+    line-height: 22px;
+
+    color        : #FFFFFF;
+    background   : #9C0332;
+    border-radius: 30px;
+    border       : none;
+}
+
+.startGame:hover {
+    animation: $anima;
+}
+
+.bottom_page {
+    // height             : 556px;
+    background         : #000915;
+    background-image   : url(img/bottomPage.jpg);
+    background-repeat  : no-repeat;
+    background-position: center;
+}
+
+.games {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    flex-wrap      : wrap;
+    gap            : 32px;
+}
+
+
+
+.game1 {
+    width           : 379px;
+    height          : 300px;
+    background-image: url(img/game1.png);
+    transition      : $trans;
+
+}
+
+.game1:hover {
+    transition: $trans;
+    scale     : 1.1;
+}
+
+
+.game2 {
+    width           : 379px;
+    height          : 300px;
+    background-image: url(img/game2.png);
+}
+
+.game2:hover {
+    transition: $trans;
+    scale     : 1.1;
+}
+
+.game3 {
+    width           : 379px;
+    height          : 300px;
+    background-image: url(img/game3.png);
+}
+
+.game3:hover {
+    transition: $trans;
+    scale     : 1.1;
+}
+
+.game_text {
+    color       : #FFFFFF;
+    display     : block;
+    font-weight : 600;
+    font-size   : 24px;
+    line-height : 32px;
+    padding-top : 236px;
+    padding-left: 32px;
+    transition  : $trans;
+}
+
+.game_text:hover {
+    scale     : 1.2;
+    transition: $trans;
+}
+
+.game1Page {
+    display       : flex;
+    flex-wrap     : wrap;
+    gap           : 120px;
+    padding-bottom: 234px;
+    padding-top   : 234px;
+}
+
+.game1Header {
+    // width      : auto;
+    padding-top: 52px;
+    font-weight: 700;
+    font-size  : 48px;
+    line-height: 59px;
+    color      : #FFFFFF;
+}
+
+.game1Text {
+    width         : 584px;
+    padding-top   : 32px;
+    padding-bottom: 32px;
+    font-weight   : 300;
+    font-size     : 18px;
+    line-height   : 32px;
+    color         : #FFFFFF;
+}
+
+.gamePlay {
+    width              : 485px;
+    height             : 333px;
+    // margin-left     : 135px;
+    background-image   : url(img/undraw_video_game_night_8h8m\ 1.svg);
+}
+
+
+
+.game2Page {
+    display       : flex;
+    flex-direction: row-reverse;
+    flex-wrap     : wrap;
+    gap           : 120px;
+    padding-bottom: 234px;
+    padding-top   : 234px;
+}
+
+.gamePlay2 {
+    width              : 485px;
+    height             : 333px;
+    // margin-left     : 135px;
+    background-image   : url(img/undraw_gaming_re_cma2\ 1.svg);
+}
+
+
+@import 'mobile';
