@@ -59,25 +59,13 @@ console.log(copy.sort(
     }));
 
 // задание-2
+// вариант1
 
+const isPositive = (num) => num > 0;
 
-function isPositive(num) {
-    if (num > 0) {
-        console.log(num)
-    }
-};
+const isMale = (person) => person.gender === 'male';
 
-function isMale(person) {
-    if (person.gender && person.gender === 'male') {
-        console.log(person)
-    }
-};
-
-function filter(arr, callback) {
-    for (let i = 0; i < arr.length; i++) {
-        callback(arr[i]);
-    }
-};
+const filter = (arr, callback) => arr.filter(callback);
 
 console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
 
@@ -88,19 +76,38 @@ const people = [
     { name: 'Оксана', gender: 'female' }
 ];
 
-console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+console.log(filter(people, isMale)); // Должен выводить [{"name":"Глеб","gender":"male"},{"name":"Олег","gender":"male"}]
+
+// вариант 2
 
 function isPositive(num) {
-    if (num > 0) {
-        console.log(num)
-    }
+    return num > 0;
 }
 
 function isMale(person) {
-    if (person.gender && person.gender === 'male') {
-        console.log(person)
-    }
+    return person.gender === 'male';
 }
+
+function filter(arr, callback) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i])) {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+
+console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
+
+const people = [
+    { name: 'Глеб', gender: 'male' },
+    { name: 'Анна', gender: 'female' },
+    { name: 'Олег', gender: 'male' },
+    { name: 'Оксана', gender: 'female' }
+];
+
+console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'}, {name: 'Олег', gender: 'male'}]
 
 // задание-3
 
@@ -162,5 +169,5 @@ function sayHi(name) {
 // Код выше менять нельзя
 
 // Нужно изменить код ниже:
-delayForSecond();
-setTimeout(sayHi('Глеб'), 1010);
+
+setTimeout(() => { return sayHi('Глеб'); }, 1010); delayForSecond();
