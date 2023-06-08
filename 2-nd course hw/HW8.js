@@ -171,3 +171,6 @@ function sayHi(name) {
 // Нужно изменить код ниже:
 
 setTimeout(() => { return sayHi('Глеб'); }, 1010); delayForSecond();
+
+
+

@@ -39,7 +39,10 @@ let result = array.sort();
 console.log(result);
 console.log(result[0]);
 console.log(result[(result.length - 1)]);
-
+// Магомедова
+let numbers = [52, 53, 49, 77, 21, 32]; // Исходный массив
+let min = Math.min(...numbers); // С помощью деструктуризации передаем числа как отдельные аргументы
+let max = Math.max(...numbers); // Аналогично
 
 //Задание 5
 
@@ -166,3 +169,7 @@ if (firstAnswer.toLowerCase() === firstElement.toLowerCase() && lastAnswer.toLow
     else {
         alert('Вы ответили не правильно');
     }
+
+
+
+  
